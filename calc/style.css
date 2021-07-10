@@ -1,0 +1,244 @@
+
+[data-theme="dark"] {
+  --bg: hsl(222, 26%, 31%);
+  --keypad: hsl(223, 31%, 20%);
+  --screen: hsl(224, 36%, 15%);
+  --key-1: hsl(225, 21%, 49%);
+  --key-1-shadow: hsl(224, 28%, 35%);
+  --key-2: hsl(6, 63%, 50%);
+  --key-2-shadow: hsl(6, 70%, 34%);
+  --key-3: hsl(30, 25%, 89%);
+  --key-3-shadow: hsl(28, 16%, 65%);
+  --screen-text: #FFFFFF;
+  --text: hsl(221, 14%, 31%);
+}
+
+[data-theme="light"] {
+  --bg: hsl(0, 0%, 90%);
+  --keypad: hsl(0, 5%, 81%);
+  --screen: hsl(0, 0%, 93%);
+  --key-1: hsl(185, 42%, 37%);
+  --key-1-shadow: hsl(185, 58%, 25%);
+  --key-2: hsl(25, 98%, 40%);
+  --key-2-shadow: hsl(25, 99%, 27%);
+  --key-3: hsl(45, 7%, 89%);
+  --key-3-shadow: hsl(35, 11%, 61%);
+  --screen-text: hsl(60, 10%, 19%);
+  --text: hsl(60, 10%, 19%);
+}
+
+[data-theme="purple"] {
+  --bg: hsl(268, 75%, 9%);
+  --keypad: hsl(268, 71%, 12%);
+  --screen: hsl(268, 71%, 12%);
+  --key-1: hsl(281, 89%, 26%);
+  --key-1-shadow: hsl(285, 91%, 52%);
+  --key-2: hsl(176, 100%, 44%);
+  --key-2-shadow: hsl(177, 92%, 70%);
+  --key-3: hsl(268, 47%, 21%);
+  --key-3-shadow: hsl(290, 70%, 36%);
+  --screen-text: ;
+  --text: hsl(198, 20%, 13%);
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Spartan';
+  font-size: 32px;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.header {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.calc {
+  color: var(--screen-text);
+}
+
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 3rem;
+  height: 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--keypad);
+  border-radius: 2rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: .75rem;
+  width: .75rem;
+  left: 5px;
+  bottom: 2.5px;
+  background-color: var(--key-2);
+  border-radius: 50%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--keypad);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--keypad);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.screen {
+  display: flex;
+  background-color: var(--screen);
+  height: 4rem;
+  padding: .4rem;
+  margin-top: .25rem;
+  margin-bottom: 2rem;
+  border-radius: .5rem;
+  color: var(--screen-text);
+  align-items: center;
+  justify-items: end;
+}
+
+#display {
+  background-color: var(--screen);
+  color: var(--screen-text);
+  width: 95%;
+  padding: .75rem;
+  border: none;
+  font-family: 'Spartan';
+  font-size: 30px;
+  text-align: right;
+}
+
+.keypad {
+  background-color: var(--keypad);
+  padding: 1.5rem .75rem;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  padding: .5rem;
+}
+
+button {
+  width: 3.75rem;
+  height: 4rem;
+  margin: 0 .5rem;
+  background-color: var(--key-3);
+  padding: .3rem;
+  border: none;
+  box-shadow: inset 0 -4px 0 0 var(--key-3-shadow);
+  color: var(--text);
+  border-radius: .2rem;
+  font-family: 'Spartan';
+  font-size: 28px;
+}
+
+#delete {
+  background-color: var(--key-1);
+  box-shadow: inset 0 -4px 0 0 var(--key-1-shadow);
+  color: white;
+  font-size: 18px;
+}
+
+#reset {
+  width: 46%;
+  height: 3.5rem;
+  background-color: var(--key-1);
+  box-shadow: inset 0 -4px 0 0 var(--key-1-shadow);
+  color: white;
+  font-size: 18px;
+}
+
+#equal {
+  width: 46%;
+  height: 3.5rem;
+  background-color: var(--key-2);
+  box-shadow: inset 0 -4px 0 0 var(--key-2-shadow);
+  color: white;
+  font-size: 18px;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 
+    35%;
+  }
+  button {
+    width: 5rem;
+    height: 3rem;
+    border-radius: .75rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    width: 98%;
+  }
+
+  .keypad {
+    padding: 1rem .15rem;
+  }
+
+  button {
+    width: 3.5rem;
+    height: 3rem;
+    font-size: 18px;
+    margin: none;
+  }
+
+  #delete {
+    font-size: 16px;
+  }
+
+  #reset {
+    font-size: 16px;
+  }
+
+  #equal {
+    font-size: 16px;
+  }
+}

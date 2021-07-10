@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    
+    <title>Frontend Mentor | Calculator app</title>
+
+  </head>
+  
+  <body data-theme="dark">
+    <div class="container">
+
+      <div class="header">
+        <div class="calc">
+          calc
+        </div>
+        <div>
+          <label class="switch">
+            <input id="slide" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="screen">
+        <input id="display" type="text" max-length="10" disabled />
+      </div>
+
+    <div>
+      <div class="keypad">
+        <div class="row">
+          <button data-key="num">7</button>
+          <button data-key="num">8</button>
+          <button data-key="num">9</button>
+          <button id="delete" data-key="delete">DEL</button>
+        </div>
+
+        <div class="row">
+          <button data-key="num">4</button>
+          <button data-key="num">5</button>
+          <button data-key="num">6</button>
+          <button data-key="+">+</button>
+        </div>
+
+        <div class="row">
+          <button data-key="num">1</button>
+          <button data-key="num">2</button>
+          <button data-key="num">3</button>
+          <button data-key="-">-</button>
+        </div>
+
+        <div class="row">
+          <button data-key=".">.</button>
+          <button data-key="num">0</button>
+          <button data-key="/">/</button>
+          <button data-key="x">x</button>
+        </div>
+
+        <div class="row">
+          <button id="reset" data-key="clear">RESET</button>
+          <button id="equal" data-key="=">=</button>
+        </div>
+      </div>
+    </div>
+
+    </div> 
+    <script src="index.js"></script>
+  </body>
+</html>
