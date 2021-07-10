@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -16,7 +16,7 @@
   </head>
   
   <body data-theme="dark">
-    <div class="container">
+    <main class="container">
 
       <div class="header">
         <div class="calc">
@@ -24,7 +24,7 @@
         </div>
         <div>
           <label class="switch">
-            <input id="slide" type="checkbox" />
+            <input id="slide" type="checkbox" aria-label="Theme Switch">
             <span class="slider"></span>
           </label>
         </div>
@@ -34,44 +34,44 @@
         <input id="display" type="text" max-length="10" disabled />
       </div>
 
-    <div>
-      <div class="keypad">
-        <div class="row">
-          <button data-key="num">7</button>
-          <button data-key="num">8</button>
-          <button data-key="num">9</button>
-          <button id="delete" data-key="delete">DEL</button>
-        </div>
+      <div>
+        <div class="keypad">
+          <div class="row">
+            <button data-key="num">7</button>
+            <button data-key="num">8</button>
+            <button data-key="num">9</button>
+            <button id="delete" data-key="delete">DEL</button>
+          </div>
 
-        <div class="row">
-          <button data-key="num">4</button>
-          <button data-key="num">5</button>
-          <button data-key="num">6</button>
-          <button data-key="+">+</button>
-        </div>
+          <div class="row">
+            <button data-key="num">4</button>
+            <button data-key="num">5</button>
+            <button data-key="num">6</button>
+            <button data-key="+">+</button>
+          </div>
 
-        <div class="row">
-          <button data-key="num">1</button>
-          <button data-key="num">2</button>
-          <button data-key="num">3</button>
-          <button data-key="-">-</button>
-        </div>
+          <div class="row">
+            <button data-key="num">1</button>
+            <button data-key="num">2</button>
+            <button data-key="num">3</button>
+            <button data-key="-">-</button>
+          </div>
 
-        <div class="row">
-          <button data-key=".">.</button>
-          <button data-key="num">0</button>
-          <button data-key="/">/</button>
-          <button data-key="x">x</button>
-        </div>
+          <div class="row">
+            <button data-key=".">.</button>
+            <button data-key="num">0</button>
+            <button data-key="/">/</button>
+            <button data-key="x">x</button>
+          </div>
 
-        <div class="row">
-          <button id="reset" data-key="clear">RESET</button>
-          <button id="equal" data-key="=">=</button>
+          <div class="row">
+            <button id="reset" data-key="clear">RESET</button>
+            <button id="equal" data-key="=">=</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    </div> 
+    </main> 
     <script src="index.js"></script>
   </body>
 </html>
